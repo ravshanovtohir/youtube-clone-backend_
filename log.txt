@@ -1,0 +1,36 @@
+/api/v1/auth/register__POST__1682401914996__ReferenceError__ClientError is not defined
+/api/v1/auth/register__POST__1682401936179__Error__400
+/api/v1/auth/register__POST__1682401966567__ValidationError__The file argument is required!
+/api/v1/auth/register__POST__1682402026240__TypeError__Cannot destructure property 'size' of 'req.file' as it is undefined.
+/api/v1/auth/register__POST__1682402059097__TypeError__Cannot read properties of undefined (reading '0')
+/api/v1/auth/register__POST__1682402069905__TypeError__Cannot destructure property 'size' of 'req.files[0]' as it is undefined.
+/api/v1/auth/register__POST__1682402151858__ReferenceError__files is not defined
+/api/v1/auth/register__POST__1682402226707__ReferenceError__buffer is not defined
+/api/v1/auth/register__POST__1682402848501__TypeError__Cannot read properties of null (reading 'files')
+/api/v1/auth/register__POST__1682402858644__ReferenceError__originalname is not defined
+/api/v1/auth/register__POST__1682402877008__ReferenceError__path is not defined
+/api/v1/auth/register__POST__1682402890532__Error__ENOENT: no such file or directory, open 'C:\Users\HP\Desktop\youtube_server\files\images\1682402890530photo_2021-09-21_10-36-34.jpg'
+/api/v1/auth/register__POST__1682402954942__ValidationError__users validation failed: user_id: this.splitPath is not a function
+/api/v1/auth/register__POST__1682402997432__Error__secretOrPrivateKey must have a value
+/api/v1/auth/register__POST__1682403023257__AuthorizationError__User Already Exist. Please Login
+/api/v1/auth/register__POST__1682403030345__Error__secretOrPrivateKey must have a value
+/api/v1/auth/register__POST__1682403034988__AuthorizationError__User Already Exist. Please Login
+/api/v1/auth/register__POST__1682403149413__Error__secretOrPrivateKey must have a value
+/api/v1/auth/register__POST__1682403203968__AuthorizationError__User Already Exist. Please Login
+/api/v1/auth/register__POST__1682403207828__Error__secretOrPrivateKey must have a value
+/api/v1/auth/register__POST__1682403231170__AuthorizationError__User Already Exist. Please Login
+/api/v1/auth/register__POST__1682403407900__AuthorizationError__User Already Exist. Please Login
+/api/v1/auth/register__POST__1682405527692__AuthorizationError__User Already Exist. Please Login
+/api/v1/auth/register__POST__1682405559004__AuthorizationError__User Already Exist. Please Login
+/api/v1/auth/register__POST__1682405621071__ValidationError__users validation failed: user_name: Path `user_name` is required.
+/api/v1/auth/register__POST__1682405996673__AuthorizationError__Username required
+/api/v1/auth/register__POST__1682406006600__AuthorizationError__Username required
+/api/v1/auth/register__POST__1682406013266__AuthorizationError__Invalid length for username
+/api/v1/auth/register__POST__1682406067169__AuthorizationError__Invalid length for username. Length of username must be more then 6 and less then 30
+/api/v1/auth/register__POST__1682406079928__AuthorizationError__password required
+/api/v1/auth/register__POST__1682406083827__AuthorizationError__Invalid length for password. Length of username must be more then 6 and less then 12
+/api/v1/auth/register__POST__1682406091426__TypeError__Cannot read properties of null (reading 'files')
+/api/v1/auth/register__POST__1682406123201__AuthorizationError__User Already Exist. Please Login
+/api/v1/auth/register__POST__1682406128396__ValidationError__The file argument is required!
+/api/v1/auth/register__POST__1682406148000__ValidationError__The file must be jpg or png!
+/api/v1/auth/register__POST__1682406168209__ValidationError__The file larger than 10MB!
