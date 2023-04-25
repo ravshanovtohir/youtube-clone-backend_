@@ -4,6 +4,7 @@ import JWT from "../utils/JWT.js";
 import sha256 from "sha256";
 import fs from "fs"
 import path from "path";
+import { log } from "console";
 
 const REGISTER = async (req, res, next) => {
     try {
@@ -93,6 +94,44 @@ const REGISTER = async (req, res, next) => {
     }
 }
 
+const LOGIN = async (req, res, next) => {
+    try {
+
+        const { username, password } = req.body
+        const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
+        const agent = req.headers['user-agent']
+
+        if (!(username || password)) {
+            return next(
+                new error.ValidationError(400, "Input is required")
+            )
+        }
+
+        const user = await User.findOne({ user_name: username, password: sha256(password) })
+
+        if (!user) {
+            return next(
+                new error.AuthorizationError(400, "Invalid username or password")
+            )
+        }
+
+        return res
+            .status(200)
+            .json({
+                status: 200,
+                message: 'The user successfully logged in!',
+                token: JWT.sign({ user_id: user._id, username, ip, agent }),
+                data: user
+            })
+
+
+    } catch (error) {
+        console.log(error.message);
+        return next(error)
+    }
+}
+
 export default {
-    REGISTER
+    REGISTER,
+    LOGIN
 }
