@@ -70,7 +70,7 @@ const REGISTER = async (req, res, next) => {
         }
 
         const fileName = Date.now() + name.replace(/\s/g, '')
-        const pathName = path.join(process.cwd(), 'files', 'images', fileName)
+        const pathName = path.join(process.cwd(), 'uploads', 'images', fileName)
         fs.writeFileSync(pathName, data)
 
         const user = await User.create({

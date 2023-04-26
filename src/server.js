@@ -1,34 +1,35 @@
 import "./config/config.js"
 import express from 'express'
 import fs from "fs"
+import path from "path"
 
 const PORT = process.env.PORT || 3001
 const app = express()
 import fileUpload from 'express-fileupload'
 
+app.use(express.static(path.join(process.cwd(), 'files')))
 //middlewares
 app.use(express.json())
 app.use(fileUpload())
+// app.use(express.static(path.join(process.cwd(), 'files')))
 
 app.get('/', (req, res) => res.send("Hello"))
+
+
 
 import database from "./config/db.js"
 
 
 // routes
 import authRouter from './routes/auth.js'
-// import postRouter from './routes/post.js'
-// import userRouter from './routes/user.js'
-
-// import User from "./sequalize.js"
-// console.log(User);
+import usersRouter from "./routes/user.js"
+import exp from "constants"
 
 !async function () {
     try {
         database()
         app.use(authRouter)
-        // app.use(postRouter)
-        // app.use(userRouter)
+        app.use(usersRouter)
     } catch (error) {
         console.log(error)
     }
